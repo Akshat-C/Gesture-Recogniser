@@ -1,0 +1,103 @@
+<html>
+
+<head>
+
+<link rel="icon" href="Thumbs Up.png"><title>Gesture Recogniser</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js" target="_blank"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="background-color: #FFC93C;">
+    
+<div class="container">
+
+<center>
+
+<div class="btn btn-success" style="margin-top: 3px; padding: 5px;">
+<h2 style="letter-spacing: 3px;">
+GESTURE RECOGNISER
+<br>
+<span>&#129304;</span>
+<span>&#128077;</span>
+<span>&#128076;</span>
+<span>&#9996;</span>
+<span>&#9994;</span>
+<span>&#128078;</span>
+<span>&#128400;</span>
+</h2>
+</div>
+<br><br>
+
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+<div class="line col-lg-4 col-md-4 col-sm-4 col-xs-4">&nbsp;</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+</div>
+
+<h3 class="btn btn-warning" style="font-size: 20px; padding: 5px; border-radius: 17px; color: #155263">Take a Selfie While Making a Gesture</h3>
+<br>
+<h4 class="btn" style="font-size: 16px; padding: 5px; border-radius: 17px; color: #155263;font-weight: bold;">Some Gestures it can Recognise Are:</h4>
+<h3 style="color: #155263;">
+<span>&#128077;</span>|
+<span>&#128076;</span>|
+<span>&#9996;</span>|
+<span>&#128078;</span>
+</h3>
+
+<div id="webcam_div" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+    <h5 style="font-weight: bold;">Webcam View- </h5>
+    <div id="camera"></div>
+    <br>
+    <button class="btn" onclick="take_img()" style="background-color: #FF6F3C;">Capture Image</button>
+    
+    </div>
+
+<div id="prediction_div" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+    <div>
+    <h5 style="font-weight: bold; background-color:#FF6F3C; width:100px !important; color: white; padding: 5px; border-radius: 15px;">Prediction 1:<br></h5>
+    <h4 id="emoji1_name"></h4>
+    <br>
+    <h4 id="emoji1_img"></h4>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+        <div class="line col-lg-6 col-md-6 col-sm-6 col-xs-6">&nbsp;</div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+    </div><br>
+        
+    <div>
+    <h5 style="font-weight: bold; background-color:#FF6F3C; width:100px !important; color: white; padding: 5px; border-radius: 15px;">Prediction 2:<br></h5>
+    <h4 id="emoji2_name"></h4>
+    <br>
+    <h4 id="emoji2_img"></h4>
+    </div>
+    
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+        <h5 style="font-weight: bold;">Image View- </h5>
+        <div id="result"></div>
+        <br>
+        <button class="btn btn-danger" onclick="result()">Predict Gesture</button>
+        
+        </div>
+
+</center>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>

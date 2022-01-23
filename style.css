@@ -1,0 +1,16 @@
+.line {
+    background: rgb(255,84,3);
+    background: linear-gradient(90deg, rgba(255,84,3,1) 15%, rgba(255,202,3,1) 50%, rgba(255,120,0,1) 85%, rgba(255,84,3,1) 2020%);
+    border-radius: 20px;
+    font-size: 6px;
+}
+
+#camera, #result {
+    height: 250px;
+    width: 250px;
+    border: 2px dashed #155263;
+}
+
+body {
+    color: #155263;
+}
